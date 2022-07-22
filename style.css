@@ -130,7 +130,7 @@ header {
   align-items: center;
   justify-content: center;
   margin-top: 100px;
-  height: max-content;
+
   flex-direction: column;
   gap: 2rem;
 }
@@ -146,15 +146,16 @@ header {
 
   letter-spacing: 4px;
 }
-.transform-section {
+
+/* ==========trans/standout section ========== */
+.trans-stand {
   display: flex;
   justify-content: center;
-  height: 100vh;
+
   width: 100vw;
   align-items: center;
   flex-direction: column;
 }
-/* ==========egg section ========== */
 .egg-section {
   height: 50vh;
   width: 100vw;
@@ -162,7 +163,15 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
 }
-.transform-text {
+.cocktail-section {
+  height: 50vh;
+  width: 100vw;
+  background-image: url(./images/mobile/image-stand-out.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.text {
   height: 60vh;
   width: 100vw;
   display: flex;
@@ -172,7 +181,7 @@ header {
   align-items: center;
   text-align: start;
 }
-.transform-text h2 {
+.text h2 {
   font-family: var(--fraunces);
   text-transform: capitalize;
   font-size: 34px;
@@ -180,19 +189,20 @@ header {
   text-align: center;
   margin-bottom: 20px;
 }
-.transform-text p {
+.text p {
   font-family: var(--barlow);
   width: 60vw;
   font-weight: 600;
   color: var(--Grayishblue);
   margin-bottom: 20px;
 }
-.transform-text h3 {
+.text h3 {
   font-family: var(--fraunces);
   font-weight: 700;
   text-transform: capitalize;
   cursor: pointer;
 }
+
 .yellow {
   margin-top: -7px;
   z-index: -99;
@@ -204,53 +214,6 @@ header {
   transition: 300ms ease-in-out;
 }
 
-/* ========== standout section=======*/
-.standout-section {
-  display: flex;
-  justify-content: center;
-  height: 100vh;
-  width: 100vw;
-  align-items: center;
-  flex-direction: column;
-}
-.cocktail-section {
-  height: 50vh;
-  width: 100vw;
-  background-image: url(./images/mobile/image-stand-out.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.standout-text {
-  height: 60vh;
-  width: 100vw;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: start;
-}
-.standout-text h2 {
-  font-family: var(--fraunces);
-  text-transform: capitalize;
-  font-size: 34px;
-  width: 60vw;
-  text-align: center;
-  margin-bottom: 20px;
-}
-.standout-text p {
-  font-family: var(--barlow);
-  width: 60vw;
-  font-weight: 600;
-  color: var(--Grayishblue);
-  margin-bottom: 20px;
-}
-.standout-text h3 {
-  font-family: var(--fraunces);
-  font-weight: 700;
-  text-transform: capitalize;
-  cursor: pointer;
-}
 .red {
   margin-top: -7px;
   z-index: -99;
@@ -268,50 +231,28 @@ header {
 .learn-more:hover + .red {
   background-color: var(--Yellow);
 }
-/* ========graphic session======= */
-.graphic-section {
+/* ========graphic-photography  section======= */
+.graphic-photography {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  flex-direction: column;
+  gap: 1rem;
   height: 100vh;
   width: 100vw;
+}
+.graphic-section {
   background: url(./images/mobile/image-graphic-design.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  display: flex;
-  align-items: center;
-  justify-content: end;
-  flex-direction: column;
-  gap: 1rem;
 }
-.graphic-section h2 {
-  font-family: var(--fraunces);
-  font-weight: 900;
-  font-size: 34px;
-  color: var(--graphicdesigntext);
-
-  text-transform: capitalize;
-}
-.graphic-section p {
-  font-family: var(--barlow);
-  font-weight: 600;
-  width: 80vw;
-  margin-bottom: 100px;
-  text-align: center;
-  color: var(--graphicdesigntext);
-}
-
-/* ========photography section====== */
 .photography-section {
-  height: 100vh;
-  width: 100vw;
   background: url(./images/mobile/image-photography.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  display: flex;
-  align-items: center;
-  justify-content: end;
-  flex-direction: column;
-  gap: 1rem;
 }
-.photography-section h2 {
+
+.graphic-photography h2 {
   font-family: var(--fraunces);
   font-weight: 900;
   font-size: 34px;
@@ -319,7 +260,7 @@ header {
 
   text-transform: capitalize;
 }
-.photography-section p {
+.graphic-photography p {
   font-family: var(--barlow);
   font-weight: 600;
   width: 80vw;
@@ -428,23 +369,27 @@ footer h2 {
   cursor: pointer;
 }
 
-@media screen and (min-width: 700px) {
+/* ======================ipad air/desktop media==================== */
+@media screen and (min-width: 770px) {
   .toggle-menu {
     display: none;
   }
-
+  .triangle {
+    display: none;
+  }
+  /* adding the links to be shown and removed the toggle ====== */
   .links-container {
     opacity: 1;
     position: static;
-
     display: flex;
     align-items: center;
     justify-content: center;
 
     margin-top: 0;
   }
+  /* =======remove the margin/bg/for the links======== */
   .nav-links {
-    /* height: 10vh; */
+    width: 80vw;
     margin-top: 0px;
     display: flex;
     align-items: flex-end;
@@ -454,7 +399,7 @@ footer h2 {
   ul {
     display: flex;
     flex-direction: row;
-    width: 50vw;
+
     align-items: center;
     justify-content: center;
     margin-right: 30px;
@@ -470,15 +415,91 @@ footer h2 {
     color: white;
     font-size: 15px;
   }
+  .contact-btn {
+    background-color: var(--White);
+  }
+  /* =======adjusting the header bg and size============== */
   header {
     background: url(./images/desktop/image-header.jpg);
-    background-size: contain;
-    margin-bottom: 0;
+    background-size: cover;
+
     background-repeat: no-repeat;
-    height: 70vw;
+    background-position: center;
     width: 100vw;
+    height: 70vh;
   }
-  .transform-section {
+  /* =======transform/standout section  */
+
+  .trans-stand {
     flex-direction: row;
+
+    width: 100vw;
+    display: flex;
+    align-items: center;
+
+    justify-content: center;
+  }
+  .egg-section {
+    height: 500px;
+    width: 50vw;
+    background: url(./images/desktop/image-transform.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    order: 2;
+    background-position: center;
+  }
+  .cocktail-section {
+    height: 500px;
+    width: 50vw;
+    background: url(./images/desktop/image-stand-out.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  .text {
+    justify-content: center;
+    height: 500px;
+
+    width: 50vw;
+  }
+  .text h2 {
+    width: 30vw;
+  }
+  .text p {
+    width: 30vw;
+  }
+  .art-section {
+    display: flex;
+  }
+  .graphic-photography {
+    width: 50vw;
+    height: 500px;
+  }
+  .graphic-section {
+    background: url(./images/desktop/image-graphic-design.jpg);
+    background-position: center;
+  }
+  .photography-section {
+    background: url(./images/desktop/image-photography.jpg);
+    background-position: center;
+  }
+
+  .graphic-photography p {
+    width: 20vw;
+    margin-bottom: 30px;
+  }
+  .profiles {
+    display: flex;
+    flex-direction: row;
+  }
+  .profile-pic {
+    width: 25vw;
+  }
+  .img-grid {
+    grid-template-columns: repeat(4, auto);
+  }
+  .img-grid img {
+    width: 25vw;
+    background-position: center;
   }
 }
