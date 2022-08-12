@@ -468,6 +468,7 @@ footer h2 {
   .text p {
     width: 30vw;
   }
+  /* ==========graphic-photography for ipad/desktop */
   .art-section {
     display: flex;
   }
@@ -488,6 +489,7 @@ footer h2 {
     width: 20vw;
     margin-bottom: 30px;
   }
+  /* ========profiles=============== */
   .profiles {
     display: flex;
     flex-direction: row;
